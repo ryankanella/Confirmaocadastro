@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de cadastro TESTE</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body onload="mostraHora()">
+    <style>
+        body {background-color: rgb(209, 203, 203)}
+    </style>
+    
+    <div id="logo"><img src="./img/logoGoverno.png" width="25%"></div>
+
+    <div id="menu">
+        <a href="">Previdência</a>
+        <a href="">Imposto de Renda</a>
+        <a href="">Legislação</a>
+        <a href="">INSS</a>
+    </div>
+
+    <center>
+        <ul id="listfeedback">
+            <li><h1>Dados coletados com sucesso!</h1></li>
+            <li>
+                <a href="file:///C:/Users/Ryan/Desktop/trabalho%20softwarer/index.html" style="padding: 8px;">
+                    <button>Voltar para página de cadastro</button>
+                </a>
+                <a href="file:///C:/Users/Ryan/Desktop/trabalho%20softwarer/index3.html" style="padding: 8px;">
+                    <button>Formulário de contato</button>
+                </a>
+            </li>
+            <li>
+                <p id="hora"></p>
+            </li>
+    </ul>
+    </center>
+    
+    <footer>
+        <h1>Cadastro no Auxílio Emergencial</h1>
+    </footer>
+
+    <script>
+        function mostraHora() {
+            const horario = new Date();
+            const dia = horario.getDate();
+            const hora = horario.getHours();
+            const minutos = horario.getMinutes();
+            var mes = horario.getMonth();
+
+            switch (mes) {
+                case 0:
+                    mes = "janeiro";
+                    break;
+                case 1:
+                    mes = "fevereiro";
+                    break;
+                case 2:
+                    mes = "março";
+                    break;
+                case 3:
+                    mes = "abril";
+                    break;
+                case 4:
+                    mes = "maio";
+                    break;
+                case 5:
+                    mes = "junho";
+                    break;
+                case 6:
+                    mes = "julho";
+                    break;
+                case 7:
+                    mes = "agosto";
+                    break;
+                case 8:
+                    mes = "setembro";
+                    break;
+                case 9:
+                    mes = "outubro";
+                    break;
+                case 10:
+                    mes = "novembro";
+                    break;
+                case 11:
+                    mes = "dezembro";
+                    break;   
+            }
+
+            document.getElementById('hora').innerHTML = "Registro feito às " + hora + ":" + minutos + " do dia " + dia + " de " + mes;
+        }
+        
+    </script>
+
+</body>
+</html>
